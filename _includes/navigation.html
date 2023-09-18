@@ -1,0 +1,17 @@
+{% assign url = page.url| remove: ".html" %}
+<nav>
+  <h2 class="title">
+    <a href="/">
+      {{ site.title }}
+    </a>  
+  </h2>
+  <ul>
+    {% for item in site.data.navigation %}
+    <li class="caption">
+      <a href="{{ item.link }}" {% if url == item.link %}class="current"{% endif %}>
+        {{ item.name }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
