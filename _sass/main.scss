@@ -134,3 +134,23 @@ nav {
 .caption {
     font-size: 20px;
 }
+
+.card {
+    background-color: $color-accent-1;
+    margin-top: 1rem;
+    padding: .5rem;
+    border-left: .5rem solid $color-accent-3;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    .title a {
+        color: $color-secondary-9;
+        text-decoration: none;
+
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
