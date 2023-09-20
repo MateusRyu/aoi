@@ -9,7 +9,7 @@ title: AoiRyu's Home
 <div class="card">
   <h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
   <p class="caption">
-    <span class="date">{{ post.date | | date: "%d/%m/%Y" }}</span>
+    <span class="date">{{ post.date | date: "%d/%m/%Y" }}</span>
   </p>
   <div class="content">
     {{ post.excerpt }}
