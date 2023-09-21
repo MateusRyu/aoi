@@ -1,0 +1,24 @@
+<script>
+window.onload = function() {
+    const codeBlocks = document.querySelectorAll("div.highlight");
+    
+    codeBlocks.forEach((codeblock, index) => {
+      const code = codeBlocks[index].innerText;
+      const copyCodeButton = document.createElement("button");
+      copyCodeButton.innerHTML = "COPY";
+      copyCodeButton.onclick = function () {
+        window.navigator.clipboard.writeText(code);
+        copyCodeButton.innerHTML = "COPIED";
+        copyCodeButton.classList.add("btn-success");
+        copyCodeButton.classList.remove("btn-outline-primary");
+
+        setTimeout(() => {
+          copyCodeButton.innerHTML = "COPY";
+          copyCodeButton.classList.remove("btn-success");
+          copyCodeButton.classList.add("btn-outline-primary");
+        }, 2000);
+      };
+      codeblock.appendChild(copyCodeButton);
+    });
+}
+</script>
