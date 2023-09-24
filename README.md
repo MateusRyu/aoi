@@ -17,4 +17,4 @@ Does `jekyll build` and runs it on a local web server at `http://localhost:4000`
 bundle exec jekyll serve
 ```
 
-To force the browser to refresh with every change, use `bundle exec jekyll serve --livereload`. If there’s a conflict or you’d like Jekyll to serve your development site at a different URL, use the `--host` and `--port` arguments, as described in the serve command options.
+To preview your site with drafts, run `jekyll serve` or `jekyll build` with the `--drafts` switch. Each will be assigned the value modification time of the draft file for its date, and thus you will see currently edited drafts as the latest posts. To force the browser to refresh with every change, use `bundle exec jekyll serve --livereload`. If there’s a conflict or you’d like Jekyll to serve your development site at a different URL, use the `--host` and `--port` arguments, as described in the serve command options.
