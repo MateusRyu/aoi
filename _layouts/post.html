@@ -1,9 +1,19 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+{% assign months = "Janeiro;Fevereiro;Março;Abril;Maio;Junho;Agosto;Setembro;Outubro;Novembro;Dezembro" | split: ";" %}
 
+<header>
+  <h1>{{ page.title }}</h1>
+  <p>
+    Publicado em: 
+    {% assign month = page.date | date: "%-m" | minus:1 %}
+    {{ page.date | date: "%-d de" }}
+    {{ months[month] }}
+    {{ page.date | date: " de %Y" }}
+  </p>
+   <p> Autor: {{ page.author }}</p>
+</header>
 {{ content }}
 {% include commentsField.html %}
 {% include addCopyButton.html %}
