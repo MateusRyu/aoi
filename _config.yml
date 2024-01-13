@@ -1,5 +1,7 @@
 title: Aoiryu
 url: https://aoi.ryu.dev.br/
+
+words_per_minutes: 200
 # https://jekyllrb.com/docs/pagination/
 paginate: 5
 paginate_path: "/blog/page_:num/"

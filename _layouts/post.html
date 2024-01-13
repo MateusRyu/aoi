@@ -12,7 +12,8 @@ layout: default
     {{ months[month] }}
     {{ page.date | date: " de %Y" }}
   </p>
-   <p> Autor: {{ page.author }}</p>
+  <p> Autor: {{ page.author }}</p>
+  <p>{% include readingTime.html %}
 </header>
 {{ content }}
 {% include commentsField.html %}

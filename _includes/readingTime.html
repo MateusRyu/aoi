@@ -1,0 +1,6 @@
+{% capture words %}
+{{ content | number_of_words | minus: site.words_per_minutes }}
+{% endcapture %}
+{% unless words contains '-' %}
+{{ words | plus: site.words_per_minutes | divided_by: site.words_per_minutes | append: ' minutos de leitura' }}
+{% endunless %}
