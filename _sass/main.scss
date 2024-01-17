@@ -123,8 +123,11 @@ nav {
     font-size: 25px;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6, p, span {
   font-family: "Lucida Console", "Courier New", monospace;
+}
+
+h1 {
   font-size: 68px;
   line-height:72px;
   margin-bottom: 8px;
@@ -132,14 +135,14 @@ h1 {
 }
 
 h2 {
-  font-family: "Lucida Console", "Courier New", monospace;
   font-size: 42px;
   line-height: 48px;
   margin-bottom: 8px;
 }
 
+
+
 p {
-    font-family: "Lucida Console", "Courier New", monospace;
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 8px;
